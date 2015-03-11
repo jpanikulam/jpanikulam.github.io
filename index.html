@@ -4,11 +4,11 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Jpanikulam.GitHub.io : Jake&#39;s Github Page">
+    <meta name="description" content="Jacob Panikulam : My summary">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Jpanikulam.GitHub.io</title>
+    <title>Jacob Panikulam</title>
   </head>
 
   <body>
@@ -16,25 +16,129 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/jpanikulam">View on GitHub</a>
+          <a id="forkme_banner" href="https://github.com/jpanikulam/jpanikulam">View on GitHub</a>
 
-          <h1 id="project_title">Jpanikulam.GitHub.io</h1>
-          <h2 id="project_tagline">Jake&#39;s Github Page</h2>
+          <h1 id="project_title">Jacob Panikulam</h1>
+          <h2 id="project_tagline">WhoisJake</h2>
 
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jpanikulam/jpanikulam/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jpanikulam/jpanikulam/tarball/master">Download this project as a tar.gz file</a>
+            </section>
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a id="blank" class="anchor" href="#blank" aria-hidden="true"><span class="octicon octicon-link"></span></a>blank</h3>
+        <h1>
+<a id="jacob-panikulam" class="anchor" href="#jacob-panikulam" aria-hidden="true"><span class="octicon octicon-link"></span></a>Jacob Panikulam</h1>
+
+<h1>
+<a id="my-current-projects" class="anchor" href="#my-current-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>My Current Projects</h1>
+
+<h2>
+<a id="visar" class="anchor" href="#visar" aria-hidden="true"><span class="octicon octicon-link"></span></a>VisAR</h2>
+
+<p>VisAR (Visual Intelligence System via Augmented Reality, I didn't pick the name) uses an Oculus rift to display augmented reality to a user. </p>
+
+<p>We use an FPGA to take in frames from two cameras mounted in front of the Rift, apply a barrel distortion to undo the Oculus Rift's lenses' pincushion distortion, and display that information to the user. At the same time, UI frames are being sent to the FPGA by a computer, and these are being overlayed with transparency onto the user's view.</p>
+
+<p>I developed a Vispy/OpenGL based rendering engine called "libVisar" that is designed to make simple Oculus Rift applications very easy to make in Python. The idea is that roboticists or other engineers without an OpenGL/DirectX background, and without access to Unity can create Oculus Rift GUI's and data displays for overlay on camera images.  </p>
+
+<p>Soon to be open source.</p>
+
+<h2>
+<a id="ieee2015-autonomous-robot-maverick-video-of-mavericks-arm" class="anchor" href="#ieee2015-autonomous-robot-maverick-video-of-mavericks-arm" aria-hidden="true"><span class="octicon octicon-link"></span></a>IEEE2015 Autonomous Robot "Maverick" <a href="http://youtu.be/6lzLW4y0CQY">Video of Maverick's Arm</a>
+</h2>
+
+<p>I lead a 35 member (and growing) team of undergraduate student engineers, building an autonomous robot for competition in the IEEE Southeastcon Competition. The goal is to build a fully autonomous robot that can navigate a randomized course to draw the word "IEEE" on an etch-a-sketch, rotate a rubix cube, successfully play <a href="http://dalpix.com/images/Simon-Game_l.jpg">"Simon Says"</a> and then pick up a card. We found this to be too easy, and decided to implement Chess as well.</p>
+
+<p>We are using monocular camera SLAM for navigation, a 4-DOF manipulator arm for acting on the environment (Using a second camera for visual servoing), mecanum wheels for locomotion, an Intel NUC running Ubuntu and ROS Indigo for high-level control, and an XMega128A1U for low-level control.</p>
+
+<p>All of our code is completely <a href="github.com/ufieeehw/IEEE2015">open source</a>. If you are looking to this for inspiration and can't seem to make something work, please feel free to contact me.</p>
+
+<h2>
+<a id="propagator" class="anchor" href="#propagator" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://mil.ufl.edu/propagator/">Propagator</a>
+</h2>
+
+<p>Propagator is an autonomous boat that competes in the AUVSI robo-boat competition. Our team will be competing in Maritime RobotX in Hawaii in 2016.</p>
+
+<p>I implemented a constrained nonlinear control allocation method for our boat's azimuth thrusters by adapting <a href="http://www.fossen.biz/home/papers/tcst04.pdf">Tor Johansen's method</a> to our needs.</p>
+
+<p>I am currently developing a path-planner for the boat that takes into account an approximation of water-resistance as a function of heading and minimizing the total rotation of our azimuth thrusters to minimize wear.</p>
+
+<p>Our code is fully <a href="github.com/uf-mil">open source</a>.</p>
+
+<h2>
+<a id="oqulus" class="anchor" href="#oqulus" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://www.oqulus.net/">Oqulus</a>
+</h2>
+
+<p>Oqulus is the seminal product from Sentinel Diagnostic Imaging, whose goal is to autonomously provide diagnostic data targeting diseases such as diabetic retinopathy, retinitis pigmentosa, and glaucoma, to find hints of these before they have done irrevocable damage.</p>
+
+<p>I developed a 2D wavelet and neural-network based approach to autonomously segmenting images of the <a href="http://www.aao.org/theeyeshaveit/optic-fundus/images/normal-fundus.jpg">retinal fundus</a>.</p>
+
+<p>I am currently working on a method for extracting the vessel topology, and autonomously distinguishing arteries from veins.</p>
+
+<h1>
+<a id="consulting-projects" class="anchor" href="#consulting-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Consulting Projects</h1>
+
+<h2>
+<a id="quarter-scale-tractor-team" class="anchor" href="#quarter-scale-tractor-team" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quarter-Scale Tractor Team</h2>
+
+<p>We are working with the UF Quarter-Scale Tractor Team to develop tools for computer-aided navigation for obstacle course traversal.</p>
+
+<h2>
+<a id="uf-rocket-team" class="anchor" href="#uf-rocket-team" aria-hidden="true"><span class="octicon octicon-link"></span></a>UF Rocket Team</h2>
+
+<p>We are in talks with the UF rocket team to design and develop software for a robot arm. This arm will be used for their competition in May, as they are required to have their rocket be partially autonomously assembled before launch.</p>
+
+<h1>
+<a id="my-past-projects" class="anchor" href="#my-past-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>My Past Projects</h1>
+
+<h2>
+<a id="ieee2014-autonomous-robot-mr-roboto" class="anchor" href="#ieee2014-autonomous-robot-mr-roboto" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://youtu.be/b_Ijie9VGrQ">IEEE2014 Autonomous Robot "Mr. Roboto"</a>
+</h2>
+
+<p>We built a robot for the SoutheastCon competition in March of 2014. The robot had to autonomously drive to each of three blue blocks, wait three seconds, and then fire a dart into a target. We did not know the position of the blue blocks in advance. Most of the other teams relied on following the white lines (inc. Georgia Tech, Duke, etc). We, instead, scavenged a LIDAR from a Roomba (Well, a <a href="https://www.youtube.com/watch?v=KnspWPlBM_o">Neato XV-11</a>) and navigated using a particle filter. </p>
+
+<p>I implemented a purely computer-vision method for identifying course objectives and determining the position of a target in the camera's field of view. At the beginning of the video, the robot rotates the turret head to visually identify the blue blocks it must drive to. Then, at each block, it servos to point toward the target based on its estimate of the position. Vision is then used to correct the target position estimate, and fire the dart accurately.</p>
+
+<h2>
+<a id="uf-eftp-bumper-bots" class="anchor" href="#uf-eftp-bumper-bots" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://imgur.com/a/TH279">UF EFTP Bumper Bots</a>
+</h2>
+
+<p>Brandon Grant and I built and programmed a set of remote-controlled bumper cars using RobotC and Lego NXT. "Bumper Bots" were designed for a UF Shands competition, to design a toy for ailing children at Shands hospital. We ended in the top three teams, and the kids adored our robots.</p>
+
+<h1>
+<a id="coursework" class="anchor" href="#coursework" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coursework</h1>
+
+<h2>
+<a id="medical-image-analysis" class="anchor" href="#medical-image-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Medical Image Analysis</h2>
+
+<p>I am currently taking a graduate CS course at UF in medical image analysis. The course teaches methods behind CT and MRI reconstruction, and methods in medical image segmentation/registration.</p>
+
+<h2>
+<a id="underactuated-robotics" class="anchor" href="#underactuated-robotics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Underactuated Robotics</h2>
+
+<p>I am currently working through MIT OCW's Underactuated Robotics course. I've gained a lot from this course already, and have been using tools gained in my daily work on robots.</p>
+
+<h2>
+<a id="convex-optimization" class="anchor" href="#convex-optimization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Convex Optimization</h2>
+
+<p>I am also currently working through (Albeit at a much lower priority) Dr. Stephen Boyd's Convex Optimization lectures from Stanford, at the encouragement of my friend Eric.</p>
+
+<h1>
+<a id="interests" class="anchor" href="#interests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interests</h1>
+
+<p>Above all, I like jokes and movies about space. On the technical side, I am interested in autonomous systems, with preference to vehicles. Or really anything that you can convince me is a cool enough math/software problem. Key words: Vision, controls, autonomous, Linux, python, linear algebra, microcontrollers.</p>
       </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
+        <p class="copyright">Jacob Panikulam maintained by <a href="https://github.com/jpanikulam">jpanikulam</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
