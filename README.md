@@ -1,2 +1,2 @@
 # jpanikulam.github.io
-[Site](jpanikulam.github.io)
+[Site](http://jpanikulam.github.io/)
