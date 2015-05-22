@@ -1,62 +1,39 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Jacob Panikulam : My summary">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Jacob Panikulam</title>
+    <meta charset="UTF-8">
+    <title>Jacob Panikulam by jpanikulam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
+    <section class="page-header">
+      <h1 class="project-name">Jacob Panikulam</h1>
+      <h2 class="project-tagline">whoisJake</h2>
+    </section>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/jpanikulam/jpanikulam">View on GitHub</a>
-
-          <h1 id="project_title">Jacob Panikulam</h1>
-          <h2 id="project_tagline">WhoisJake</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/jpanikulam/jpanikulam/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/jpanikulam/jpanikulam/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
+    <section class="main-content">
+      <h1>
 <a id="jacob-panikulam" class="anchor" href="#jacob-panikulam" aria-hidden="true"><span class="octicon octicon-link"></span></a>Jacob Panikulam</h1>
 
 <h1>
 <a id="my-current-projects" class="anchor" href="#my-current-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>My Current Projects</h1>
 
 <h2>
-<a id="visar" class="anchor" href="#visar" aria-hidden="true"><span class="octicon octicon-link"></span></a>VisAR</h2>
-
-<p>VisAR (Visual Intelligence System via Augmented Reality, I didn't pick the name) uses an Oculus rift to display augmented reality to a user. </p>
-
-<p>We use an FPGA to take in frames from two cameras mounted in front of the Rift, apply a barrel distortion to undo the Oculus Rift's lenses' pincushion distortion, and display that information to the user. At the same time, UI frames are being sent to the FPGA by a computer, and these are being overlayed with transparency onto the user's view.</p>
-
-<p>I developed a Vispy/OpenGL based rendering engine called "libVisar" that is designed to make simple Oculus Rift applications very easy to make in Python. The idea is that roboticists or other engineers without an OpenGL/DirectX background, and without access to Unity can create Oculus Rift GUI's and data displays for overlay on camera images.  </p>
-
-<p>Soon to be open source.</p>
-
-<h2>
-<a id="ieee2015-autonomous-robot-maverick-video-of-mavericks-arm" class="anchor" href="#ieee2015-autonomous-robot-maverick-video-of-mavericks-arm" aria-hidden="true"><span class="octicon octicon-link"></span></a>IEEE2015 Autonomous Robot "Maverick" <a href="http://youtu.be/6lzLW4y0CQY">Video of Maverick's Arm</a>
+<a id="amazon-picking-challenge" class="anchor" href="#amazon-picking-challenge" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://amazonpickingchallenge.org/details.shtml">Amazon Picking Challenge</a>
 </h2>
 
-<p>I lead a 35 member (and growing) team of undergraduate student engineers, building an autonomous robot for competition in the IEEE Southeastcon Competition. The goal is to build a fully autonomous robot that can navigate a randomized course to draw the word "IEEE" on an etch-a-sketch, rotate a rubix cube, successfully play <a href="http://dalpix.com/images/Simon-Game_l.jpg">"Simon Says"</a> and then pick up a card. We found this to be too easy, and decided to implement Chess as well.</p>
+<p>A friend and I are competing in the Amazon Picking challenge using a Schunk robot with two 7-DOF arms. I designed and integrated the majority of the perception stack, including PCL in C++, Image analysis in MATLAB and various vision and logic components in Python. All of this was done using ROS and the various tools it provides, alongside numerous internally developed tools.</p>
 
-<p>We are using monocular camera SLAM for navigation, a 4-DOF manipulator arm for acting on the environment (Using a second camera for visual servoing), mecanum wheels for locomotion, an Intel NUC running Ubuntu and ROS Indigo for high-level control, and an XMega128A1U for low-level control.</p>
+<p>I am competing as one of four members of Team Georgia Tech out of GT's Robotics and Intelligent Machines laboratory.</p>
 
-<p>All of our code is completely <a href="github.com/ufieeehw/IEEE2015">open source</a>. If you are looking to this for inspiration and can't seem to make something work, please feel free to contact me.</p>
+<h4>
+<a id="implementation-details" class="anchor" href="#implementation-details" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementation details</h4>
+
+<p>Image-similarity metrics are generated using symmetrized Kullbeck-Leibler divergence (Jensen-Shannon) for initial object recognition in the 2D image. The object is segmented in 2D, and that segmentation is projected onto the point cloud - and is then used as a seed for region-growing 3D segmentation. Then, prerejective sample consensus is used to register our known models of the object to the sensed point cloud, which enables our robot to autonomously grasp the object.</p>
 
 <h2>
 <a id="propagator" class="anchor" href="#propagator" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://mil.ufl.edu/propagator/">Propagator</a>
@@ -74,14 +51,16 @@
 <a id="oqulus" class="anchor" href="#oqulus" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://www.oqulus.net/">Oqulus</a>
 </h2>
 
-<p>Oqulus is the seminal product from Sentinel Diagnostic Imaging, whose goal is to autonomously provide diagnostic data targeting diseases such as diabetic retinopathy, retinitis pigmentosa, and glaucoma, to find hints of these before they have done irrevocable damage.</p>
+<p>I am the principle computer vision engineer at Sentinel Diagnostic Imaging, with our flagship product being Oqulus. Oqulus is the seminal product from Sentinel Diagnostic Imaging, whose goal is to autonomously provide diagnostic data targeting diseases such as diabetic retinopathy, retinitis pigmentosa, and glaucoma, to find hints of these before they have done irrevocable damage.</p>
 
 <p>I developed a 2D wavelet and neural-network based approach to autonomously segmenting images of the <a href="http://www.aao.org/theeyeshaveit/optic-fundus/images/normal-fundus.jpg">retinal fundus</a>.</p>
 
-<p>I am currently working on a method for extracting the vessel topology, and autonomously distinguishing arteries from veins.</p>
+<p>I am currently working on a method for extracting the vessel topology, and autonomously distinguishing arteries from veins. The exact methods used are proprietary to the Oqulus technology, and cannot be discussed in great depth on a webpage.</p>
 
 <h1>
 <a id="consulting-projects" class="anchor" href="#consulting-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Consulting Projects</h1>
+
+<p>I started an initiative within the University of Florida IEEE student section to provide electronics and software consulting services to local companies and student organizations. We lend skilled students to these groups, and offer our expertise at no cost.</p>
 
 <h2>
 <a id="quarter-scale-tractor-team" class="anchor" href="#quarter-scale-tractor-team" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quarter-Scale Tractor Team</h2>
@@ -95,6 +74,29 @@
 
 <h1>
 <a id="my-past-projects" class="anchor" href="#my-past-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>My Past Projects</h1>
+
+<h2>
+<a id="visar" class="anchor" href="#visar" aria-hidden="true"><span class="octicon octicon-link"></span></a>VisAR</h2>
+
+<p>VisAR (Visual Intelligence System via Augmented Reality, I didn't pick the name) uses an Oculus rift to display augmented reality to a user. </p>
+
+<p>We use an FPGA to take in frames from two cameras mounted in front of the Rift, apply a barrel distortion to undo the Oculus Rift's lenses' pincushion distortion, and display that information to the user. At the same time, UI frames are being sent to the FPGA by a computer, and these are being overlayed with transparency onto the user's view.</p>
+
+<p>I developed a Vispy/OpenGL based rendering engine called "libVisar" that is designed to make simple Oculus Rift applications very easy to make in Python. The idea is that roboticists or other engineers without an OpenGL/DirectX background, and without access to Unity can create Oculus Rift GUI's and data displays for overlay on camera images.  </p>
+
+<p>Soon to be open source.</p>
+
+<h2>
+<a id="ieee2015-autonomous-robot-maverick-video-of-mavericks-arm" class="anchor" href="#ieee2015-autonomous-robot-maverick-video-of-mavericks-arm" aria-hidden="true"><span class="octicon octicon-link"></span></a>IEEE2015 Autonomous Robot "Maverick" <a href="http://youtu.be/6lzLW4y0CQY">Video of Maverick's Arm</a>
+</h2>
+
+<p>I led a 40 member team of undergraduate student engineers, building an autonomous robot for competition in the IEEE Southeastcon Competition. The goal is to build a fully autonomous robot that can navigate a randomized course to draw the word "IEEE" on an etch-a-sketch, rotate a rubix cube, successfully play <a href="http://dalpix.com/images/Simon-Game_l.jpg">"Simon Says"</a> and then pick up a card. We found this to be too easy, and decided to implement Chess as well.</p>
+
+<p>We used monocular camera SLAM for navigation, a 4-DOF manipulator arm for acting on the environment (Using a second camera for visual servoing), mecanum wheels for locomotion, an Intel NUC running Ubuntu and ROS Indigo for high-level control, and an XMega128A1U for low-level control.</p>
+
+<p>All of our code is completely <a href="github.com/ufieeehw/IEEE2015">open source</a>. If you are looking to this for inspiration and can't seem to make something work, please feel free to contact me.</p>
+
+<p>For 2016, I have passed on leadership to Ian Van Stralen, with mechanical lead Stephan Strassle.</p>
 
 <h2>
 <a id="ieee2014-autonomous-robot-mr-roboto" class="anchor" href="#ieee2014-autonomous-robot-mr-roboto" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://youtu.be/b_Ijie9VGrQ">IEEE2014 Autonomous Robot "Mr. Roboto"</a>
@@ -132,18 +134,25 @@
 <a id="interests" class="anchor" href="#interests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interests</h1>
 
 <p>Above all, I like jokes and movies about space. On the technical side, I am interested in autonomous systems, with preference to vehicles. Or really anything that you can convince me is a cool enough math/software problem. Key words: Vision, controls, autonomous, Linux, python, linear algebra, microcontrollers.</p>
-      </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Jacob Panikulam maintained by <a href="https://github.com/jpanikulam">jpanikulam</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer class="site-footer">
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
 
-    
+    </section>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-63284725-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
 
   </body>
 </html>
+
