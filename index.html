@@ -5,7 +5,7 @@
     <title>Jacob Panikulam by jpanikulam</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
@@ -23,29 +23,47 @@
 <a id="my-current-projects" class="anchor" href="#my-current-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>My Current Projects</h1>
 
 <h2>
-<a id="amazon-picking-challenge" class="anchor" href="#amazon-picking-challenge" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://amazonpickingchallenge.org/details.shtml">Amazon Picking Challenge</a>
+<a id="subjugator" class="anchor" href="#subjugator" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://subjugator.org/">Subjugator</a>
 </h2>
 
-<p>I competed with Team Georgia Tech in the Amazon Picking challenge using a Schunk robot with two 7-DOF arms. We came in 10th place, internationally (40+ teams qualified, 28 attended). I designed and integrated the majority of the perception stack, including PCL in C++, Image analysis in MATLAB and various vision and logic components in Python. All of this was done using ROS and the various tools it provides, alongside numerous internally developed tools.</p>
+<p>I was named Subjugator software lead at the end of August 2015. Since then, we've begun a massive campaign to re-implement all of the existing code, which has a few target tasks:</p>
 
-<p>I competed as one of four members of Team Georgia Tech out of GT's Robotics and Intelligent Machines laboratory.</p>
+<ul>
+<li>Remove, replace, or fix all of the existing legacy code (Kill the cruft!)</li>
+<li>Begin a shift to C++ (Dr. Schwartz has promised an imaging sonar if we do this, but after miles of negotiation, we will never be entirely replacing Python)</li>
+<li>Start over, with a clear architecture in mind, design requirements in advance, and a properly build-mastered repository</li>
+<li>An alarm-based fault-handling system</li>
+</ul>
 
-<p>Our code is <a href="https://github.com/ehuang3/apc_ros">open source</a></p>
+<p>Once that's done, we'll be working on 3D perception via stereo vision, until we can get an imaging sonar. 
+Our less lofty goals include:</p>
 
-<h4>
-<a id="implementation-details" class="anchor" href="#implementation-details" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementation details</h4>
+<ul>
+<li>3D motion planning</li>
+<li>3D traversability map generated from sensed information, not hardcoded</li>
+<li>
+<a href="http://dspace.mit.edu/openaccess-disseminate/1721.1/81448">Highly parallel motion planning</a> using CUDA</li>
+</ul>
 
-<p>Image-similarity metrics are generated using symmetrized Kullbeck-Leibler divergence (Jensen-Shannon) for initial object recognition in the 2D image. The object is segmented in 2D, and that segmentation is projected onto the point cloud - and is then used as a seed for region-growing 3D segmentation. Then, prerejective sample consensus is used to register our known models of the object to the sensed point cloud, which enables our robot to autonomously grasp the object.</p>
+<p>We have many more, but won't discuss them until they are in progress.</p>
 
 <h2>
 <a id="propagator" class="anchor" href="#propagator" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://mil.ufl.edu/propagator/">Propagator</a>
 </h2>
 
-<p>Propagator is an autonomous boat that competes in the AUVSI robo-boat competition. Our team will be competing in Maritime RobotX in Hawaii in 2016.</p>
+<p>Propagator is an autonomous boat that competes in the AUVSI robo-boat competition. Our team will be competing in the Maritime RobotX competition in Hawaii in 2016.</p>
 
 <p>I implemented a constrained nonlinear control allocation method for our boat's azimuth thrusters by adapting <a href="http://www.fossen.biz/home/papers/tcst04.pdf">Tor Johansen's method</a> to our needs.</p>
 
-<p>I am currently developing a path-planner for the boat that takes into account an approximation of water-resistance as a function of heading and minimizing the total rotation of our azimuth thrusters to minimize wear.</p>
+<p>There are a few current projects I am working on or managing, in parallel:</p>
+
+<ul>
+<li>Motion planning using kinodynamic RRT* (So far, this works spectacularly)</li>
+<li>Mapping and obstacle detection using a Velodyne puck (We finally got out Velodyne about two weeks ago)</li>
+<li>Object tracking using Velodyne-generated pcl data</li>
+</ul>
+
+<p>With more on the queue once these are complete.</p>
 
 <p>Our code is fully <a href="www.github.com/uf-mil">open source</a>.</p>
 
@@ -55,7 +73,7 @@
 
 <p>I am the principle computer vision engineer at Sentinel Diagnostic Imaging, with our flagship product being Oqulus. Oqulus is the seminal product from Sentinel Diagnostic Imaging, whose goal is to autonomously provide diagnostic data targeting diseases such as diabetic retinopathy, retinitis pigmentosa, and glaucoma, to find hints of these before they have done irrevocable damage.</p>
 
-<p>I developed a 2D wavelet and neural-network based approach to autonomously segmenting images of the retinal funduss.</p>
+<p>I developed a 2D wavelet and neural-network based approach to autonomously segmenting images of the retinal fundus.</p>
 
 <p>I am currently working on a method for extracting the vessel topology, and autonomously distinguishing arteries from veins. The exact methods used are proprietary to the Oqulus technology, and cannot be discussed in great depth on a webpage.</p>
 
@@ -76,6 +94,27 @@
 
 <h1>
 <a id="my-past-projects" class="anchor" href="#my-past-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>My Past Projects</h1>
+
+<h2>
+<a id="cvxbind" class="anchor" href="#cvxbind" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/jpanikulam/cvxbind">CVXBind</a>
+</h2>
+
+<p>Automatically generator bindings Boost::Python Python bindings for C-code generated by CVXGEN.</p>
+
+<h2>
+<a id="amazon-picking-challenge" class="anchor" href="#amazon-picking-challenge" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://amazonpickingchallenge.org/details.shtml">Amazon Picking Challenge</a>
+</h2>
+
+<p>I competed with Team Georgia Tech in the Amazon Picking challenge using a Schunk robot with two 7-DOF arms. We came in 10th place, internationally (40+ teams qualified, 28 attended). I designed and integrated the majority of the perception stack, including PCL in C++, Image analysis in MATLAB and various vision and logic components in Python. All of this was done using ROS and the various tools it provides, alongside numerous internally developed tools.</p>
+
+<p>I competed as one of four members of Team Georgia Tech out of GT's Robotics and Intelligent Machines laboratory.</p>
+
+<p>Our code is <a href="https://github.com/ehuang3/apc_ros">open source</a></p>
+
+<h4>
+<a id="implementation-details" class="anchor" href="#implementation-details" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementation details</h4>
+
+<p>Image-similarity metrics are generated using symmetrized Kullbeck-Leibler divergence (Jensen-Shannon) for initial object recognition in the 2D image. The object is segmented in 2D, and that segmentation is projected onto the point cloud - and is then used as a seed for region-growing 3D segmentation. Then, prerejective sample consensus is used to register our known models of the object to the sensed point cloud, which enables our robot to autonomously grasp the object.</p>
 
 <h2>
 <a id="visar" class="anchor" href="#visar" aria-hidden="true"><span class="octicon octicon-link"></span></a>VisAR</h2>
@@ -118,14 +157,19 @@
 <a id="coursework" class="anchor" href="#coursework" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coursework</h1>
 
 <h2>
+<a id="nonlinear-controls" class="anchor" href="#nonlinear-controls" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nonlinear Controls</h2>
+
+<p>I am currently taking Dr. Warren Dixon's graduate nonlinear controls course. So far, it has been largely a review of Tedrake's underactuated robotics.</p>
+
+<h2>
 <a id="medical-image-analysis" class="anchor" href="#medical-image-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Medical Image Analysis</h2>
 
-<p>I am currently taking a graduate CS course at UF in medical image analysis. The course teaches methods behind CT and MRI reconstruction, and methods in medical image segmentation/registration.</p>
+<p>Graduate CS course at UF in medical image analysis. The course teaches methods behind CT and MRI reconstruction, and methods in medical image segmentation/registration.</p>
 
 <h2>
 <a id="underactuated-robotics" class="anchor" href="#underactuated-robotics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Underactuated Robotics</h2>
 
-<p>I am currently working through MIT OCW's Underactuated Robotics course. I've gained a lot from this course already, and have been using tools gained in my daily work on robots.</p>
+<p>MIT OCW's graduate Underactuated Robotics course. I've gained a lot from this course, and have been using tools gained in my daily work.</p>
 
 <h2>
 <a id="convex-optimization" class="anchor" href="#convex-optimization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Convex Optimization</h2>
@@ -135,7 +179,7 @@
 <h1>
 <a id="interests" class="anchor" href="#interests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interests</h1>
 
-<p>Above all, I like jokes and movies about space. On the technical side, I am interested in autonomous systems, with preference to vehicles. Or really anything that you can convince me is a cool enough math/software problem. Key words: Vision, controls, autonomous, Linux, python, linear algebra, microcontrollers.</p>
+<p>Above all, I like jokes and movies about space. On the technical side, I am interested in autonomous systems, with preference to vehicles. Or really anything that you can convince me is a cool enough math/software problem. Key words: Perception, controls, autonomous, Linux, python, linear algebra, motion planning, model-predictive control, simulation, microcontrollers.</p>
 
       <footer class="site-footer">
 
@@ -157,4 +201,3 @@
 
   </body>
 </html>
-
