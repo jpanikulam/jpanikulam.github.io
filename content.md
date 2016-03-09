@@ -59,7 +59,7 @@ Automatically generate bindings Boost::Python Python bindings for C-code generat
 
 
 ## [Oqulus](http://www.oqulus.net/)
-I am the principal computer vision engineer at Sentinel Diagnostic Imaging, with our flagship product being Oqulus. Oqulus is the seminal product from Sentinel Diagnostic Imaging, whose goal is to autonomously provide diagnostic data targeting diseases such as diabetic retinopathy, retinitis pigmentosa, and glaucoma, to find hints of these before they have done irrevocable damage.
+I am the principle computer vision engineer at Sentinel Diagnostic Imaging, with our flagship product being Oqulus. Oqulus is the seminal product from Sentinel Diagnostic Imaging, whose goal is to autonomously provide diagnostic data targeting diseases such as diabetic retinopathy, retinitis pigmentosa, and glaucoma, to find hints of these before they have done irrevocable damage.
 
 
 I developed a 2D wavelet and neural-network based approach to autonomously segmenting images of the retinal fundus.
@@ -71,17 +71,13 @@ I am currently working on a method for extracting the vessel topology, and auton
 # Consulting Projects
 I started an initiative within the University of Florida IEEE student section to provide electronics and software consulting services to local companies and student organizations. We lend skilled students to these groups, and offer our expertise at no cost.
 
-## UF FSAE Team
-We are developing a camera-based method for determining side-slip angle for a Formula SAE car. The current plan is to use the Sub's SVO implementation.
 
 ## Quarter-Scale Tractor Team
-We worked with the UF Quarter-Scale Tractor Team to develop tools for computer-aided navigation for obstacle course traversal.
+We are working with the UF Quarter-Scale Tractor Team to develop tools for computer-aided navigation for obstacle course traversal.
 
 
 ## UF Rocket Team
 We are in talks with the UF rocket team to design and develop software for a robot arm. This arm will be used for their competition in May, as they are required to have their rocket be partially autonomously assembled before launch.
-
-
 
 
 # My Past Projects
