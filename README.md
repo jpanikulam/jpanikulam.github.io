@@ -66,7 +66,6 @@ Current features include:
 ## Business and Marketing
 * Organized a cooperation with the Florida Fish and Wildlife Commission to analyze largemouth Bass populations in Lake Kingsley
 * Organized a cooperation with the UF Seahorse Key research lab to search for "ghost traps" (traps left behind by fishermen that are extremely hazardous to wildlife), and a group of us traveled to the Gulf of Mexico with the sub in April
-* Negotiated at $20,000 discount on an imaging sonar, a device vital to underwater navigation
 * Organized a $10,000 donation to MIL from rotary club members
 
 
