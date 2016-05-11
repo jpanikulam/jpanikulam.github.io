@@ -21,12 +21,14 @@ alias sub='cd ~/repos/rosboat_ws/src/Sub8';
 alias sub8l='sub; subl ..; roscore &'
 alias cap='cd ~/repos/CAP6515';
 alias books='cd ~/repos/books';
-alias exp='cd ~/repos/experiments/perception/data/iphone_cal';
+alias exp='cd ~/repos/experiments/perception/data/';
 
 # Silly
 alias balias='vim ~/repos/bash_stuff/bash_aliases.sh';
 alias src='echo "Sourcing from ~/.bashrc"; . ~/.bashrc';
 alias o='gnome-open'
+alias subm='rosrun sub8_missions tx_mission'
+
 
 alias success_sound='paplay /usr/share/sounds/ubuntu/stereo/message.ogg;'
 #alias make='make; date; success_sound'
@@ -50,7 +52,13 @@ alias netkill='sudo killall -STOP NetworkManager';
 # Catkin
 alias makeieee='catkin_make -C ~/repos/ieee_ws/';
 alias makemil='catkin_make -C ~/repos/mil_ws';
-alias makerb='catkin_make -C ~/repos/rosboat_ws';
+#alias makerb='catkin_make -C ~/repos/rosboat_ws';
+
+makerb() {
+    catkin_make -C ~/repos/rosboat_ws "$@";
+    success_sound
+}
+
 
 # MIL
 alias rosprop='export ROS_MASTER_URI=http://propagator:11311';
@@ -143,7 +151,9 @@ cpwd() {
     if [ $# -eq 0 ]; then
         echo $PWD | c
     else
-        echo "$PWD/$1" | c
+        FOO="$(echo -e "$PWD/$1" | sed -e 's/[[:space:]]*$//')"
+        echo "$FOO" | c
+        #echo "$PWD/$1" | c
     fi
 }
 
@@ -153,4 +163,8 @@ py() {
     else
         python $@
     fi
+}
+
+yt() {
+    py /home/jacob/repos/youtube_playlist_manager/youtube.py all --diff --update
 }
