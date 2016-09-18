@@ -26,6 +26,7 @@ class ReformatArgs(sublime_plugin.TextCommand):
 
         depth = 0
         out_str = "\n" + padding
+        prev_char = ''
         for char_num, character in enumerate(text):
             chars_left = len(text) - 1 - char_num
 
@@ -36,14 +37,15 @@ class ReformatArgs(sublime_plugin.TextCommand):
             if character in '}])':
                 depth -= 1
 
-            # Scrub spaces
-            if character != ' ' or depth > 0:
+            # Scrub spaces if we're at the base depth
+            if ((prev_char != ',') or (character != ' ')) or depth > 0:
                 out_str += character
+                prev_char = character
 
-            # --> If there's a comma
-            # --> And we're not inside of a parenthization
-            # --> And this isn't a comma at the end of the string
-            # : Add a newline
+            # : If there's a comma
+            # : And we're not inside of a parenthization
+            # : And this isn't a comma at the end of the string
+            # --> Then add a newline
             if character == ',' and depth == 0 and chars_left > 0:
                 out_str += '\n' + padding
 
