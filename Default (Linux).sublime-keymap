@@ -1,0 +1,7 @@
+[
+    { "keys": ["ctrl+shift+="], "command": "increment_numbers" },
+    { "keys": ["ctrl+shift+-"], "command": "decrement_numbers" },
+    { "keys": ["ctrl+alt+space"], "command": "reformat_args" }
+
+]
+
