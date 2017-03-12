@@ -3,8 +3,21 @@ Jacob Panikulam
 
 # My Current Projects
 
+## Work
+Since the end of February, I have been working on a new venture in Pittsburgh, PA.
+
+## Sonder
+Geometric sonar navigation
+
+## CPY
+Python syntactic code generation
+
+
+
+# My Past Projects
+
 ## [SubjuGator](http://subjugator.org/)
-I was named SubjuGator software lead at the end of August 2015. Since then, we've begun a massive campaign to re-implement all of the legacy code, and build a much more autonomous vehicle. Note: **all** of this work was done by a handful of undergraduate students at UF in the last year.
+I was named SubjuGator software lead at the end of August 2015. I lead a massive campaign to re-implement all of the legacy code, and build a much more autonomous vehicle. Note: **all** of this work was done by a handful of undergraduate students at UF in the subsequent year.
 
 Current features include:
 
@@ -66,7 +79,6 @@ Current features include:
 ## Business and Marketing
 * Organized a cooperation with the Florida Fish and Wildlife Commission to analyze largemouth Bass populations in Lake Kingsley
 * Organized a cooperation with the UF Seahorse Key research lab to search for "ghost traps" (traps left behind by fishermen that are extremely hazardous to wildlife), and a group of us traveled to the Gulf of Mexico with the sub in April
-* Negotiated at $20,000 discount on an imaging sonar, a device vital to underwater navigation
 * Organized a $10,000 donation to MIL from rotary club members
 
 
@@ -106,7 +118,7 @@ I am the principal computer vision engineer at Sentinel Diagnostic Imaging, with
 I developed a 2D wavelet and neural-network based approach to autonomously segmenting images of the retinal fundus. This is widely considered one of the "holy grails" of the medical imaging community, and the accuracy my method gets (~95% on all tested datasets) is competitive or ahead of the state of the art.
 
 
-I am currently working on a method for extracting the vessel topology, and autonomously distinguishing arteries from veins. The exact methods used are proprietary to the Oqulus technology, and cannot be discussed in great depth on a webpage.
+I also worked on methods for extracting the vessel topology, and autonomously distinguishing arteries from veins.
 
 
 # Consulting Projects
@@ -130,9 +142,6 @@ We worked with the UF Quarter-Scale Tractor Team to develop tools for computer-a
 We are in talks with the UF rocket team to design and develop software for a robot arm. This arm will be used for their competition in May, as they are required to have their rocket be partially autonomously assembled before launch.
 
 
-
-
-# My Past Projects
 ## [Amazon Picking Challenge](http://amazonpickingchallenge.org/details.shtml)
 
 I competed with Team Georgia Tech in the Amazon Picking challenge using a Schunk robot with two 7-DOF arms. We came in 10th place, internationally (40+ teams qualified, 28 attended). I designed and integrated the majority of the perception stack, including PCL in C++, Image analysis in MATLAB and various vision and logic components in Python. All of this was done using ROS and the various tools it provides, alongside numerous internally developed tools.
@@ -154,8 +163,6 @@ We use an FPGA to take in frames from two cameras mounted in front of the Rift, 
 
 I developed a Vispy/OpenGL based rendering engine called "libVisar" that is designed to make simple Oculus Rift applications very easy to make in Python. The idea is that roboticists or other engineers without an OpenGL/DirectX background, and without access to Unity can create Oculus Rift GUI's and data displays for overlay on camera images.
 
-
-Soon to be open source.
 
 
 ## IEEE2015 Autonomous Robot "Maverick" [Video of Maverick's Arm](http://youtu.be/6lzLW4y0CQY)
@@ -196,7 +203,7 @@ Some particularly interesting coursework
 ## Nonlinear Controls
 I took Dr. Dixon's graduate nonlinear control I course, which was a really cool foray into advanced analytical control my final project was an adaptive controller for the Sub.
 
-## Compute Vision for Autonomous Navigation
+## Computer Vision for Autonomous Navigation
 A course in computer vision and probabilistic methods for navigation, made available by the Technical University of Munich
 
 ## Machine Learning for Computer Vision
@@ -211,7 +218,7 @@ MIT OCW's graduate Under-actuated Robotics course. I've gained a lot from this c
 
 
 ## Convex Optimization
-I am also currently working through (Albeit at a much lower priority) Dr. Stephen Boyd's Convex Optimization lectures from Stanford, at the encouragement of my friend Eric.
+I remotely took Dr. Stephen Boyd's Convex Optimization lectures from Stanford, at the encouragement of my friend Eric.
 
 
 If you're coming here from MIL, the other courses I suggest are:
@@ -228,4 +235,6 @@ I gained a huge amount from these. All are free. Don't let anybody make you pay 
 # Interests
 
 
-Above all, I like jokes and movies about space. On the technical side, I am interested in autonomous systems, with preference to vehicles. Or really anything that you can convince me is a cool enough math/software problem. Key words: Perception, controls, autonomous, Linux, python, linear algebra, motion planning, model-predictive control, simulation, microcontrollers.
+I am chiefly interested in autonomous mobile robotics.
+
+ Key words: Perception, controls, autonomous, Linux, python, linear algebra, motion planning, model-predictive control, simulation, microcontrollers.
