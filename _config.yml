@@ -1,0 +1,8 @@
+title: Jacob Panikulam
+description: whoisJake
+google_analytics: UA-63284725-1
+show_downloads: true
+theme: jekyll-theme-slate
+
+gems:
+  - jekyll-mentions
