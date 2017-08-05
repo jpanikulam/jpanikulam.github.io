@@ -6,13 +6,29 @@ Jacob Panikulam
 ## Work
 Since the end of February, I have been working on a new venture in Pittsburgh, PA.
 
-## Sonder
-Geometric sonar navigation
+## [Sonar Circles: 3D Sonar SLAM](http://imgur.com/a/8LveG)
+Geometric sonar navigation, using forward-looking imaging sonar. Pictures above from simulation.
 
-## CPY
-Python syntactic code generation
+Sonar Circles is a model-based sonar mapping approach, which is distinct from many common approaches in that it accumulates evidence and generates maps in 3D, despite using a nominally 2D sensor.
+
+## [CPY](https://github.com/jpanikulam/cpy)
+Python syntactic code generation.
+
+Exists intending to support a few common use-cases:
+*  Matrix operations with sparsity known at compile time
+    * Imagine doing pre-conditioned conjugate gradient, with preconditioner computed at compile time
+* Generic programming where the C++ template language is insufficient or impractical
 
 
+## [CPlotPlot](http://imgur.com/a/ilvmj)
+It is hard to fine a simple, unintrusive C++11 3D plotting library that doesn't try to reinvent the wheel. CPlotPlot is a simple 2D and 3D plotting library that can be used to create plots in just a few lines, using standard data structures. No QVector, no required hand-crafted shaders. Just plots.
+
+Examples:
+```
+  const Eigen::MatrixXd surface = get_2d_image();
+  plot->add_surface({surface, 0.01});
+  plot->add_histogram({values});
+```
 
 # My Past Projects
 
@@ -229,12 +245,9 @@ If you're coming here from MIL, the other courses I suggest are:
 
 [Udacity Intro to AI for robotics](https://www.udacity.com/course/artificial-intelligence-for-robotics--cs373)
 
-I gained a huge amount from these. All are free. Don't let anybody make you pay for knowledge on the internet.
-
+Great courses. All free.
 
 # Interests
 
-
-I am chiefly interested in autonomous mobile robotics.
-
- Key words: Perception, controls, autonomous, Linux, python, linear algebra, motion planning, model-predictive control, simulation, microcontrollers.
+I am interested in perception, planning and localization for mobile robots.
+I like boats.
