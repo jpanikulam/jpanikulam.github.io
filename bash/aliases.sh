@@ -8,26 +8,12 @@ alias bbbbbb='bbbb; bb';
 alias back='cd $OLDPWD';
 alias ll='ls -AlF';
 
-# Location Aliases
-alias ieee='cd ~/repos/ieee_ws/src/IEEE2015';
-alias visar='cd ~/repos/visar/computer/src/python/libVisar';
-alias rift='cd ~/repos/rift';
-alias ippd='cd ~/repos/visar';
-alias cop='cd ~/repos/cop3503/cop3503project';
-alias oqulus='cd ~/repos/oqulus';
-alias personal='cd ~/repos/personal/';
-alias prop='cd ~/repos/mil_ws/src/uf-mil/PropaGator';
-alias sub='cd ~/repos/rosboat_ws/src/Sub8';
-alias sub8l='sub; subl ..; roscore &'
-alias cap='cd ~/repos/CAP6515';
-alias books='cd ~/repos/books';
-alias exp='cd ~/repos/experiments/perception/data/';
+alias exp='cd ~/repos/experiments/';
 
 # Silly
-alias balias='vim ~/repos/bash_stuff/bash_aliases.sh';
+alias balias='subl ~/repos/jpanikulam.github.io/bash/aliases.sh';
 alias src='echo "Sourcing from ~/.bashrc"; . ~/.bashrc';
 alias o='gnome-open'
-alias subm='rosrun sub8_missions tx_mission'
 
 
 alias success_sound='paplay /usr/share/sounds/ubuntu/stereo/message.ogg;'
@@ -39,29 +25,7 @@ makel() {
 }
 alias make='makel';
 
-# Applications
-# alias matlab='~/repos/Matlab_Code/matlab &';
-alias matlab='/usr/local/MATLAB/R2014b/bin/matlab &';
-#alias pdf='mupdf';
 alias chrome='google-chrome-stable &'
-
-# Network
-alias netstart='sudo service network-manager restart';
-alias netkill='sudo killall -STOP NetworkManager';
-
-# Catkin
-alias makeieee='catkin_make -C ~/repos/ieee_ws/';
-alias makemil='catkin_make -C ~/repos/mil_ws';
-#alias makerb='catkin_make -C ~/repos/rosboat_ws';
-
-makerb() {
-    catkin_make -C ~/repos/rosboat_ws "$@";
-    success_sound
-}
-
-
-# MIL
-alias rosprop='export ROS_MASTER_URI=http://propagator:11311';
 
 # Xclip
 alias c='xclip -selection clipboard'
@@ -108,7 +72,7 @@ rn() {
     if [ $# -eq 0 ]; then
         echo -en "\033]0;$PWD\a"
         named=false;
-    else 
+    else
         echo -en "\033]0;$1\a"
         if [ $# -eq 2 ]; then
             named=false;
@@ -163,8 +127,4 @@ py() {
     else
         python $@
     fi
-}
-
-yt() {
-    py /home/jacob/repos/youtube_playlist_manager/youtube.py all --diff --update
 }
