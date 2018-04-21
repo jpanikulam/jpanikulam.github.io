@@ -14,6 +14,7 @@ alias exp='cd ~/repos/experiments/';
 alias balias='subl ~/repos/jpanikulam.github.io/bash/aliases.sh';
 alias src='echo "Sourcing from ~/.bashrc"; . ~/.bashrc';
 alias o='gnome-open'
+alias pgit='cat ~/repos/PAT_GIT | c'
 
 
 alias success_sound='paplay /usr/share/sounds/ubuntu/stereo/message.ogg;'
@@ -128,3 +129,4 @@ py() {
         python $@
     fi
 }
+
