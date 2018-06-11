@@ -32,6 +32,10 @@ sudo apt-get install libxmu-dev libxi-dev -y
 sudo apt-get install python-pip ipython -y
 
 
+sudo apt-get install python-pip ipython -y
+sudo pip install matplotlib -y
+sudo apt-get install python-tk -y
+
 #
 # Viewer
 #
@@ -73,3 +77,4 @@ fi
 # sudo apt-get install linux-headers-$(uname -r) -y
 # sudo apt-get nvidia-375 nvidia-modprobe -y
 # sudo apt-get install nvidia-375 nvidia-modprobe -y
+
