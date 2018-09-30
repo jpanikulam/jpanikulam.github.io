@@ -34,6 +34,7 @@ sudo apt-get install python-pip ipython -y
 
 sudo apt-get install python-pip ipython -y
 sudo pip install matplotlib -y
+sudo pip install colorama -y
 sudo apt-get install python-tk -y
 
 #
