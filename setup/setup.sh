@@ -25,7 +25,6 @@ sudo apt-get install libopencv-dev python-opencv -y
 sudo apt-get install libxmu-dev libxi-dev -y
 # sudo apt-get install eigen3-dev  # Probably you (Jake) will have to download eigen3 manually if 3.4 hasn't been added to launchpad -y
 
-
 #
 # Tools
 #
@@ -43,6 +42,9 @@ sudo apt-get install python-tk -y
 sudo apt-get install xorg-dev libglu1-mesa-dev -y
 sudo apt-get install libglfw3 libglfw3-dev libglew-dev -y
 sudo apt-get install freeglut3-dev -y
+
+
+git config --global core.editor "vim"
 
 #
 # Sublime

@@ -13,7 +13,7 @@ alias exp='cd ~/repos/experiments/';
 # Silly
 alias balias='subl ~/repos/jpanikulam.github.io/bash/aliases.sh';
 alias src='echo "Sourcing from ~/.bashrc"; . ~/.bashrc';
-alias o='gnome-open'
+alias o='xdg-open'
 alias pgit='cat ~/repos/PAT_GIT | c'
 
 
@@ -24,7 +24,7 @@ makel() {
         date
         success_sound
 }
-alias make='makel';
+# alias make='makel';
 
 alias chrome='google-chrome-stable &'
 
