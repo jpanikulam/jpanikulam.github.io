@@ -1,3 +1,5 @@
+export PATH=~/install/linux-`uname -r | sed 's/-.*//'`/tools/perf:$PATH
+
 # Folder Navigation
 alias b='cd ..';
 alias bb='b;b';
@@ -84,7 +86,8 @@ rn() {
 }
 hml() {
      # How much time have I wasted (How many lines of code have I written)
-     find $1 \( -iname "*.py" -o -iname "*.cc" -o -iname "*.cpp" -o -iname "*.m" -o -iname "*.h" -o -iname "*.hpp" \) | xargs wc -l
+     find $1 \( -iname "*.py" -o -iname "*.cc" -o -iname "*.cpp" -o -iname "*.m" -o -iname "*.h" -o -iname "*.hh" -o -iname "*.hpp" \) | xargs wc -l
+     # find $1 \( -iname "*.py" -o -iname "*.cc" -o -iname "*.cpp" -o -iname "*.m" -o -iname "*.h" -o -iname "*.hpp" \) -not -path "./third_party/*" -not -path "./cuda/*" | xargs wc -l
 }
 
 rp () {
