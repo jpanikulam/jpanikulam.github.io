@@ -1,7 +1,7 @@
 sudo apt-get install git -y
 sudo apt-get install terminator -y
-sudo apt-get install compiz-config-settings-manager -y
-sudo apt-get install compizconfig-settings-manager  compiz-plugins-default compiz-plugins-extra compiz-plugins-main -y
+# sudo apt-get install compiz-config-settings-manager -y
+# sudo apt-get install compizconfig-settings-manager  compiz-plugins-default compiz-plugins-extra compiz-plugins-main -y
 sudo apt-get install cmake -y
 sudo apt-get install xclip -y
 
@@ -24,6 +24,7 @@ fi
 sudo apt-get install libopencv-dev python-opencv -y
 sudo apt-get install libxmu-dev libxi-dev -y
 # sudo apt-get install eigen3-dev  # Probably you (Jake) will have to download eigen3 manually if 3.4 hasn't been added to launchpad -y
+sudo apt install libassimp-dev
 
 #
 # Tools
