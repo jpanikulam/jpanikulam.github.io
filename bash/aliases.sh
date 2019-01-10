@@ -8,31 +8,47 @@ alias bbbb='bb;bb';
 alias bbbbb='bbbb; b';
 alias bbbbbb='bbbb; bb';
 alias back='cd $OLDPWD';
-alias ll='ls -AlF';
+alias ll='ls -AlF --group-directories-first';
 
-alias exp='cd ~/repos/experiments/';
+# Location Aliases
+alias exp='cd ~/repos/experiments/;'
 
 # Silly
-alias balias='subl ~/repos/jpanikulam.github.io/bash/aliases.sh';
+alias balias='subl ~/repos/bash/aliases.sh';
 alias src='echo "Sourcing from ~/.bashrc"; . ~/.bashrc';
 alias o='xdg-open'
 alias pgit='cat ~/repos/PAT_GIT | c'
+alias mount_jet="sshfs -o idmap=user jacob@jet:/home/jacob/repos/hover-jet ~/repos/mnt-odroid/;"
+alias jetdocker="docker run -ti -v /home/jacob/repos:/jet -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY hoverjet/jet bash;"
 
 
 alias success_sound='paplay /usr/share/sounds/ubuntu/stereo/message.ogg;'
-#alias make='make; date; success_sound'
 makel() {
         make $@
-        date
-        success_sound
+        SX=$?
+
+        if [ $SX ]; then
+            date
+            # success_sound
+        fi
+        echo $SX
 }
 # alias make='makel';
 
+#alias pdf='mupdf';
 alias chrome='google-chrome-stable &'
+
+xrun() {
+    exp
+    cd bin/;
+    cmake ..
+    make $1 && ./run/$1;
+}
 
 # Xclip
 alias c='xclip -selection clipboard'
 alias v='xclip -o -selection clipboard'
+alias pgit='cat ~/repos/PAT_GIT|c'
 # Run whatever command is in the clipboard
 rv() {
     v
@@ -87,7 +103,6 @@ rn() {
 hml() {
      # How much time have I wasted (How many lines of code have I written)
      find $1 \( -iname "*.py" -o -iname "*.cc" -o -iname "*.cpp" -o -iname "*.m" -o -iname "*.h" -o -iname "*.hh" -o -iname "*.hpp" \) | xargs wc -l
-     # find $1 \( -iname "*.py" -o -iname "*.cc" -o -iname "*.cpp" -o -iname "*.m" -o -iname "*.h" -o -iname "*.hpp" \) -not -path "./third_party/*" -not -path "./cuda/*" | xargs wc -l
 }
 
 rp () {
@@ -96,7 +111,7 @@ rp () {
 
 firp() {
     # Find and replace
-    find . -type f -exec sed -i "s/$1/$2/g" {} \;
+    find . -type f -exec sed -i "s@$1@$2@g" {} \;
 }
 
 alias cd='cl';
@@ -133,3 +148,62 @@ py() {
     fi
 }
 
+yt() {
+    py /home/jacob/repos/youtube_playlist_manager/youtube.py all --diff --update
+}
+
+
+bootwin() {
+    WINDOWS_ENTRY=`grep menuentry /boot/grub/grub.cfg  | grep --line-number Windows`
+    MENU_NUMBER=$(( `echo $WINDOWS_ENTRY | sed -e "s/:.*//"` - 1 ))
+    sudo grub-reboot $MENU_NUMBER
+    sudo reboot
+
+}
+
+export CUDA_HOME=/usr/local/cuda-9.0
+export LD_LIBRARY_PATH=${CUDA_HOME}/lib64
+
+PATH=${CUDA_HOME}/bin:${PATH}
+export PATH
+
+# convert -delay 5 -loop 0 *.png myimage.gif
+# ffmpeg -i ../gjk.mp4  -r 1 'frame-%03d.png'
+
+
+
+# Phrases other people have said that should be incorporated more readily into normal speaking
+#
+# - Paul on the road to Damascus
+# - Between Scylla and Charybdis
+# - Jesus wept, because there were no more worlds to conquer
+# - Scott for scientific method, Amundsen for speed and efficiency but when disaster strikes and all hope is gone, get down on your knees and pray to Shackleton
+# - Nobless oblige
+# - Bunburying (From the Importance of Being Earnest)
+# - Eureka
+# - When I lose, I don't look for consolation in the score
+# - Be like Nelson at Trafalgar
+# - "Burn the ships", "Alea Iacta Est", "The Die is Cast"
+#
+# To Watch/Read:
+# - The Importance of Being Earnest (I think I read it in high school?)
+# - Murderball (Rhett)
+# - Who Killed Captain Alex (Rhett: Some kind of Ugandan bootleg homemade action movie?)
+#
+#
+# Nostalgia:
+# - Medal of Honor
+#
+#
+# To Play:
+# RHCP: Snow
+# BOC: Don't Fear the Reaper
+#
+#
+#
+# ctrl+u
+# alt-
+#
+# regexes:
+# self._properties\[(.*)\]\['type'\]
+# self._type(\1)

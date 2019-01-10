@@ -113,11 +113,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-for file in ~/repos/bash/* 
+for file in ~/repos/bash/*.sh 
 do
 	source "$file"
 done
-source /opt/ros/indigo/setup.bash
-source /home/apc/repos/apc/devel/setup.bash
-#export PATH=/usr/local/MATLAB/R02014b/bin:$PATH
-rosc
