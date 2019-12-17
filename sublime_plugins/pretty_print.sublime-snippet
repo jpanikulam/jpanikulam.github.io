@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+sympy.pretty_print(${1:symbol})
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>pretty_print</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

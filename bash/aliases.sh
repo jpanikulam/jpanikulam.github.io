@@ -35,7 +35,8 @@ makel() {
 }
 # alias make='makel';
 
-#alias pdf='mupdf';
+
+alias mount_jet="sshfs -o idmap=user mason@jet:/home/mason/hover-jet ~/repos/mnt-odroid/;"
 alias chrome='google-chrome-stable &'
 
 xrun() {
@@ -113,6 +114,11 @@ firp() {
     # Find and replace
     find . -type f -exec sed -i "s@$1@$2@g" {} \;
 }
+
+firpexp() {
+    find . -type f -not -path "./third_party/*" -not -path "./cuda/*" -not -path "./.git/*" -exec sed -i "s/$1/$2/g" {} \;
+}
+
 
 alias cd='cl';
 
@@ -207,3 +213,21 @@ export PATH
 # regexes:
 # self._properties\[(.*)\]\['type'\]
 # self._type(\1)
+
+efind() {
+    find $@ . 2>/dev/null
+}
+
+tomp4() {
+    # G0045647.JPG
+    # image-%05d.jpg
+    ffmpeg -framerate 25 -i ./* -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p ~/output.mp4
+}
+
+zkill() {
+    sudo kill -9 $(ps aux | grep -i $1 |  awk "{print \$2}" | head -n1)
+}
+
+
+alias ros='source /opt/ros/melodic/setup.bash'
+alias perfrep='perf report -g 'graph,0.5,caller
