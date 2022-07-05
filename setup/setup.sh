@@ -33,8 +33,8 @@ sudo apt-get install python-pip ipython -y
 
 
 sudo apt-get install python-pip ipython -y
-sudo pip install matplotlib -y
-sudo pip install colorama -y
+sudo pip install matplotlib
+sudo pip install colorama
 sudo apt-get install python-tk -y
 
 #
@@ -61,24 +61,15 @@ if [ $? -eq 1 ]; then
 fi
 
 
-#
-# Bash
-#
-
-cat ~/.bashrc | grep "ZZZIDSJIJIJIASNDNKVKNV"
-if [ $? -eq 1 ]; then
-    echo "
-for file in ~/repos/jpanikulam.github.io/bash/*.sh
-do
-    source '$file'
-done
-alias ZZZIDSJIJIJIASNDNKVKNV='echo sand'
-" >> ~/.bashrc
-fi
-
 
 # CUDA?
 # sudo apt-get install linux-headers-$(uname -r) -y
 # sudo apt-get nvidia-375 nvidia-modprobe -y
 # sudo apt-get install nvidia-375 nvidia-modprobe -y
+# sudo apt install nvidia-390 nvidia-modprobe -y
 
+curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/bionic.gpg | sudo apt-key add -
+curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/bionic.list | sudo tee /etc/apt/sources.list.d/tailscale.list
+
+sudo apt-get update
+sudo apt-get install tailscale
